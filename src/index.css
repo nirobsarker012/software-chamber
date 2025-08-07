@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
+:root {
+  --primary-gradient: linear-gradient(
+    to right,
+    #4b5563,
+    #6b7280,
+    rgba(255, 255, 255, 0.6)
+  );
+}
 
 @custom-variant dark (&:is(.dark *));
 
