@@ -1,7 +1,7 @@
 import React from "react";
 
 import star from "../../assets/components_svg/multi_stars.svg";
-import left_arroe from "../../assets/components_svg/left_arrow.svg";
+import left_arrow from "../../assets/components_svg/left_arrow.svg";
 import digital_img from "../../assets/font_images/digital_sol.svg";
 import CountUp from "../styles/Countup";
 
@@ -68,7 +68,7 @@ const Digital_Solu: React.FC = () => {
             <span className="text-gray-400">we specialize</span> in turning
             complex challenges into elegant{" "}
             <span className="text-gray-400">digital solutions</span>{" "}
-            <img src={left_arroe} alt="" className="inline-block" />
+            <img src={left_arrow} alt="" className="inline-block" />
           </h1>
         </div>
 

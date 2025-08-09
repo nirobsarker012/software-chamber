@@ -6,6 +6,7 @@ import React from "react";
 import Software from "../components/ui/Software";
 import Passion from "../components/ui/Passion";
 import Technology_Pattern from "../components/ui/Technology_Pattern";
+import Faq from "../components/ui/Faq";
 
 const Home: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
       <Software />
       <Passion />
       <Technology_Pattern />
+      <Faq />
     </>
   );
 };
