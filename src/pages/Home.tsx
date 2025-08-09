@@ -3,6 +3,7 @@ import Digital_Solu from "../components/ui/Digital_Solu";
 import Hero from "../components/ui/Hero";
 import Navbar from "../components/ui/Navbar";
 import React from "react";
+import Software from "../components/ui/Software";
 
 const Home: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const Home: React.FC = () => {
       </div>
       <Digital_Solu />
       <Service />
+      <Software />
     </>
   );
 };
