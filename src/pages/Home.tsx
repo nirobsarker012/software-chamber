@@ -1,3 +1,4 @@
+import Service from "../components/ui/Service";
 import Digital_Solu from "../components/ui/Digital_Solu";
 import Hero from "../components/ui/Hero";
 import Navbar from "../components/ui/Navbar";
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <Digital_Solu />
+      <Service />
     </>
   );
 };
