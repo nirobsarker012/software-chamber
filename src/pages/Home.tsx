@@ -4,6 +4,7 @@ import Hero from "../components/ui/Hero";
 import Navbar from "../components/ui/Navbar";
 import React from "react";
 import Software from "../components/ui/Software";
+import Passion from "../components/ui/Passion";
 
 const Home: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
       <Digital_Solu />
       <Service />
       <Software />
+      <Passion />
     </>
   );
 };
