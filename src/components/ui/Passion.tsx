@@ -97,11 +97,11 @@ export default function Passion() {
         </button>
 
         {/* Cards Container */}
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-[60px] xl:pb-[180px]">
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`bg-white rounded-xl shadow-md p-6 md:p-8 transition-all duration-300 ${
+              className={`bg-[#F3F3F3] rounded-xl shadow-md p-6 md:p-8 transition-all duration-300 ${
                 card.offset
               } ${index === activeIndex ? "scale-105 shadow-lg" : "scale-100"}`}
             >
