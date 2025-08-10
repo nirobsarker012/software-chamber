@@ -30,7 +30,7 @@ Shiloh, Hawaii 81063`,
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-primary py-[40px] sm:py-[60px] lg:pt-[154px]">
+    <footer className="bg-primary py-[40px] sm:py-[60px] lg:pt-[154px] relative overflow-hidden">
       <div className="container px-4 sm:px-6 lg:px-0">
         <h1 className="uppercase font-semibold font-bricol text-white text-[28px] sm:text-[38px] md:text-[54px] lg:text-[74px] xl:text-[100px] mb-[20px] lg:mb-[36px]">
           let's talk
@@ -98,6 +98,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="absolute inset-0 w-[180px] lg:w-[320px] h-[200px] xl:h-[300px] bg-[#00ffe0]/40 opacity-30 blur-[80px] rounded-full transform translate-x-[300px] md:translate-x-[500px] lg:translate-x-[600px] xl:translate-x-[900px] 2xl:translate-x-[1400px]"></div>
+      <div className="absolute inset-0 w-[150px] lg:w-[220px] h-[200px] lg:h-[700px] xl:h-[300px] bg-[#00ffe0]/40 opacity-30 blur-[80px] rounded-full translate-y-[600px]"></div>
     </footer>
   );
 };
