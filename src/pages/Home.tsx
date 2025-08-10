@@ -7,6 +7,7 @@ import Software from "../components/ui/Software";
 import Passion from "../components/ui/Passion";
 import Technology_Pattern from "../components/ui/Technology_Pattern";
 import Faq from "../components/ui/Faq";
+import ClientInfo from "../components/ui/ClientInfo";
 
 const Home: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ const Home: React.FC = () => {
       <Passion />
       <Technology_Pattern />
       <Faq />
+      <ClientInfo />
     </>
   );
 };
