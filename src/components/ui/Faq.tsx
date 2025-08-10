@@ -30,7 +30,8 @@ const Faq: React.FC = () => {
         </span>
       </div>
       {/* Border Bottom */}
-      <span className="border-1 border-dashed border-gray-400 inline-flex items-center w-full"></span>
+      <div className="w-full my-4 h-[1px] bg-[repeating-linear-gradient(to_right,rgba(0,0,0,0.5),rgba(0,0,0,0.5)_12px,transparent_8px,transparent_20px)] mt-[60px] lg:mt-[156px]"></div>
+
       <Accordation />
     </div>
   );

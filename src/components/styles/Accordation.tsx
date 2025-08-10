@@ -42,7 +42,7 @@ const Accordation: React.FC = () => {
   };
 
   return (
-    <div className="py-8">
+    <div className="py-8 lg:py-30">
       {allData.map((item, index) => (
         <div
           key={item.id}
