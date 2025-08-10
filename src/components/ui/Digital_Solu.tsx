@@ -12,7 +12,7 @@ interface digitalContext {
 }
 
 type CountUp = {
-  number?: number;
+  number: number;
   title?: string;
 };
 
