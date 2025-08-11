@@ -56,9 +56,9 @@ const Accordation: React.FC = () => {
           >
             {item.question}
             {activeId === item.id ? (
-              <FiChevronUp className="bg-teal-400 text-white text-2xl p-[18px] rounded-full" />
+              <FiChevronUp className="bg-teal-400 text-white w-[50px] h-[50px] text-2xl rounded-full cursor-pointer" />
             ) : (
-              <FiChevronDown className="text-white bg-[#383838] p-[18px] rounded-full text-2xl" />
+              <FiChevronDown className=" bg-[#383838] text-white w-[50px] h-[50px] rounded-full text-2xl cursor-pointer" />
             )}
           </button>
 
@@ -69,7 +69,7 @@ const Accordation: React.FC = () => {
                 : "max-h-0 opacity-0"
             }`}
           >
-            <div className="pb-4 text-gray-600 font-outfit max-w-[1200px]">
+            <div className="pb-4 text-gray-600 font-outfit max-w-[1000px] mb-10">
               {item.answer}
             </div>
           </div>

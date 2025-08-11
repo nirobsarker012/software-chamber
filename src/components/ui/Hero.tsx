@@ -1,52 +1,53 @@
 import React from "react";
-import hero_bg from "../../assets/banner_frame/hero.svg";
-import singleStar from "../../assets/components_svg/star_1.svg";
-import hero_img_1 from "../../assets/components_svg/hero_im_1.svg";
-import Hero_cards from "./Hero_cards";
-// import hero_img_2 from "../../assets/components_svg/hero_in_2.svg";
-
+import banner_btn from "../../assets/banner_frame/banner_btn.svg";
+import hero_img from "../../assets/components_svg/hero_im_1.svg";
+import { IoMdLogOut } from "react-icons/io";
+import BannerCardDesign from "../styles/BannerCardDesign";
 const Hero: React.FC = () => {
   return (
     <main>
-      <div
-        className="bg-cover bg-center py-70 md:py-100 relative max-w-[1300px] mx-auto"
-        style={{ backgroundImage: `url(${hero_bg})` }}
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(#3d3d3d_1px,transparent_1px)] [background-size:20px_20px] transform translate-y-30">
-          {/* Hero Content */}
-          <div
-            className="px-[12px] py-[10px] text-[14px] font-inter  bg-gradient-to-r from-teal-500/60 via-black to-teal-500/60 rounded-[30px] border border-teal-600
-              hover:from-teal-600 hover:via-black hover:to-teal-600
-              transition-all duration-300 max-w-[248px] mx-auto"
-          >
-            <span className="inline-flex items-center gap-x-2">
-              <img className="" src={singleStar} alt="" />
-              Smarter Idea, instant solutions
-            </span>
-          </div>
-          {/* Hero-Title */}
-          <div className="text-center max-w-[450px] md:max-w-[550px] lg:max-w-[1110px] mx-auto py-4 sm:text-[46px] md:text-[56px] lg:text-[110px] bg-gradient-to-b from-[#00ffe0] to-white bg-clip-text text-transparent font-medium font-bricol">
-            <h1 className="">
+      <div className="min-h-[500px] xl:min-h-screen bg-[url('assets/banner_frame/hero.svg')] bg-cover bg-center container relative">
+        {/* Background pattern - made responsive */}
+        <div className="absolute top-70 lg:top-90 xl:top-1/2 left-1/2 w-full max-w-[95vw] md:w-[800px] lg:w-[1000px] xl:w-[1200px] sm:h-[400px] md:h-[500px] bg-[radial-gradient(#3d3d3d_1px,transparent_1px)] [background-size:10px_10px] -translate-x-1/2 -translate-y-1/2">
+          <div className="flex flex-col justify-center items-center h-full px-4 sm:px-6">
+            {/* Banner button image - responsive sizing */}
+            <img
+              src={banner_btn}
+              alt=""
+              className="max-w-[200px] sm:max-w-[250px] md:max-w-[320px] mb-[15px] sm:mb-[30px]"
+            />
+
+            {/* Main heading - responsive text and layout */}
+            <h1 className="font-medium font-bricol text-[28px] sm:text-[40px] md:text-[60px] lg:text-[80px] xl:text-[110px] text-center text-transparent bg-clip-text bg-gradient-to-b from-teal-500 via-teal-100 to-gray-200 mb-[15px] sm:mb-[30px] leading-tight">
               We are your Software Development{" "}
-              <img
-                src={hero_img_1}
-                alt=""
-                className="w-[50px] xl:w-[70px] inline-block"
-              />{" "}
-              <img
-                src={hero_img_1}
-                alt=""
-                className="w-[50px] xl:w-[70px] inline-block"
-              />{" "}
-              Team in The Cloud.
+              <span className="inline-flex">
+                <img
+                  src={hero_img}
+                  alt=""
+                  className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[90px] md:h-[90px] inline-block mx-1"
+                />
+                <img
+                  src={hero_img}
+                  alt=""
+                  className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[90px] md:h-[90px] inline-block mx-1"
+                />
+              </span>
+              Team in the Cloud
             </h1>
+
+            {/* Contact button - responsive sizing */}
+            <button className="inline-flex items-center gap-x-[20px] sm:gap-x-[40px] md:gap-x-[60px] bg-gradient-to-r from-gray-700 via-gray-500 to-white/60 text-white font-medium font-outfit py-[4px] px-[8px] sm:py-[6px] sm:px-[10px] lg:py-[8px] lg:px-[16px] text-[14px] sm:text-[16px] lg:text-[21px] rounded-[60px] border-2 border-white/34 cursor-pointer">
+              Contact US
+              <div className="bg-white rounded-full text-black w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] flex items-center justify-center text-[14px] sm:text-[16px] md:text-[18px]">
+                <IoMdLogOut />
+              </div>
+            </button>
           </div>
-          {/* Hero Card Section */}
-        </div>
-        <div className="flex justify-center mt-4 absolute transform translate-y-12">
-          <Hero_cards />
         </div>
       </div>
+
+      {/* Banner-card */}
+      <BannerCardDesign />
     </main>
   );
 };

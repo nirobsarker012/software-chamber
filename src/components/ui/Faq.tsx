@@ -24,7 +24,7 @@ const Faq: React.FC = () => {
         </h1>
         <span className="inline-flex items-center gap-x-3.5 font-outfit text-[18px] sm:text-[20px] cursor-pointer">
           All FAQ
-          <div className="bg-[#2CCEBA] py-[8px] px-[7px] rounded-full text-black">
+          <div className="bg-[#2CCEBA] flex items-center justify-center w-[58px] h-[58px] rounded-full text-black">
             <FaArrowRightLong />
           </div>
         </span>

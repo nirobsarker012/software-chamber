@@ -1,5 +1,5 @@
 import React from "react";
-// import grid_color from "../../assets/banner_frame/grid_right.svg";
+// import grid_icon from "../../assets/banner_frame/grid_right.svg";
 // import grid_layout_left from "../../assets/banner_frame/grid_layout_left.svg";
 import banner_btn from "../../assets/banner_frame/banner_btn.svg";
 import { IoMdLogOut } from "react-icons/io";
@@ -7,7 +7,14 @@ import earth_img from "../../assets/banner_frame/earth.svg";
 
 const Software: React.FC = () => {
   return (
-    <div className="bg-primary pt-[160px] relative">
+    <div className="bg-primary pt-[160px] relative software overflow-hidden">
+      {/* <div className="">
+        <img
+          src={grid_layout_left}
+          alt=""
+          className="z-[-999px] inline-block"
+        />
+      </div> */}
       <div className="container relative px-4 sm:px-6 lg:px-8">
         {/* Content Center */}
         <div className="flex items-center justify-center flex-col text-center">
@@ -19,7 +26,7 @@ const Software: React.FC = () => {
           />
 
           {/* Heading */}
-          <h1 className="max-w-[320px] sm:max-w-[450px] md:max-w-[550px] lg:max-w-[900px] xl:max-w-[1110px] mx-auto py-4 text-[28px] sm:text-[36px] md:text-[46px] lg:text-[70px] xl:text-[110px] bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent font-medium font-bricol leading-snug">
+          <h1 className="max-w-[320px] sm:max-w-[450px] md:max-w-[550px] lg:max-w-[900px] xl:max-w-[1110px] mx-auto py-4 text-[28px] sm:text-[36px] md:text-[46px] lg:text-[70px] xl:text-[110px] bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent font-medium font-bricol lg:leading-28">
             Our Software Development Process
           </h1>
 

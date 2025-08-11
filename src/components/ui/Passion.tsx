@@ -1,25 +1,23 @@
-import { useEffect, useRef, useState } from "react";
-import { FaChevronLeft } from "react-icons/fa";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules"; // No Navigation module here
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import right_arrow from "../../assets/components_svg/right_arrow.svg";
+import "swiper/css";
+import "swiper/css/pagination";
+
 import img_1 from "../../assets/components_svg/efficiency.svg";
 import img_2 from "../../assets/components_svg/adaptabilty.svg";
 import img_3 from "../../assets/components_svg/scalability.svg";
 import img_4 from "../../assets/components_svg/precision.svg";
-import { FaChevronRight } from "react-icons/fa";
-import right_arrow from "../../assets/components_svg/right_arrow.svg";
 
-interface Card {
-  title: string;
-  content: string;
-  offset: string;
-  icon: string;
-}
-
-const cards: Card[] = [
+const cards = [
   {
     title: "Efficiency",
     content:
       "Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.",
-    offset: "lg:-mt-10",
+    offset: "lg:mt-10",
     icon: img_1,
   },
   {
@@ -33,7 +31,21 @@ const cards: Card[] = [
     title: "Scalability",
     content:
       "Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.",
-    offset: "lg:-mt-10",
+    offset: "lg:mt-10",
+    icon: img_3,
+  },
+  {
+    title: "Scalability",
+    content:
+      "Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.",
+    offset: "lg:mt-5",
+    icon: img_3,
+  },
+  {
+    title: "Scalability",
+    content:
+      "Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.",
+    offset: "lg:mt-10",
     icon: img_3,
   },
   {
@@ -47,19 +59,15 @@ const cards: Card[] = [
 
 export default function Passion() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout>();
-
-  const nextSlide = () => {
-    setActiveIndex((prev) => (prev + 1) % cards.length);
-  };
-
-  const prevSlide = () => {
-    setActiveIndex((prev) => (prev - 1 + cards.length) % cards.length);
-  };
+  const swiperRef = useRef<any>(null);
 
   useEffect(() => {
-    intervalRef.current = setInterval(nextSlide, 3000);
-    return () => clearInterval(intervalRef.current);
+    const interval = setInterval(() => {
+      if (swiperRef.current) {
+        swiperRef.current.swiper.slideNext();
+      }
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -77,49 +85,74 @@ export default function Passion() {
         <button className="inline-flex items-center gap-x-3 sm:gap-x-5 lg:gap-x-8 bg-gradient-to-r from-[#2CCEBA] to-[#16AD71] text-white font-semibold font-outfit py-[6px] px-[10px] lg:py-[12px] lg:px-[16px] text-[14px] sm:text-[16px] lg:text-[22px] rounded-[60px] border-2 mt-5 max-w-[230px] mx-auto cursor-pointer">
           Let's Discuss
           <div className="bg-white rounded-full text-black p-1 sm:p-1.5 lg:p-2 text-[14px] sm:text-[16px] lg:text-[18px]">
-            <img src={right_arrow} alt="" />
+            <img src={right_arrow} alt="right arrow" className="w-4 h-4" />
           </div>
         </button>
       </div>
-      <div className="relative py-6 overflow-hidden">
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute z-10 top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-3 shadow-lg hover:bg-gray-700 transition-colors"
-        >
-          <FaChevronLeft className="w-5 h-5" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute z-10 top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-3 shadow-lg hover:bg-gray-700 transition-colors"
-        >
-          <FaChevronRight className="w-5 h-5" />
-        </button>
-
-        {/* Cards Container */}
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-[60px] xl:pb-[180px]">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className={`bg-[#F3F3F3] rounded-xl shadow-md p-6 md:p-8 transition-all duration-300 ${
-                card.offset
-              } ${index === activeIndex ? "scale-105 shadow-lg" : "scale-100"}`}
-            >
-              <div className="flex justify-between items-start mb-4">
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
-                  {card.title}
-                </h2>
-                <span className="bg-[#2CCEBA] p-3 rounded-full">
-                  <img src={card.icon} alt={card.title} className="w-6 h-6" />
-                </span>
-              </div>
-              <div className="border border-gray-400/20"></div>
-              <p className="text-gray-600 text-base md:text-lg mt-2.5">
-                {card.content}
-              </p>
-            </div>
-          ))}
+      <div className="relative container mb-[90px] lg:mb-[200px]">
+        {/* Custom Navigation Buttons */}
+        <div className="absolute top-1/2 left-0 right-0 flex justify-between z-10 -translate-y-1/2">
+          <button
+            onClick={() => swiperRef.current?.swiper.slidePrev()}
+            className="bg-black/80 hover:bg-black text-gray-300 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+          >
+            <FiArrowLeft className="text-xl" />
+          </button>
+          <button
+            onClick={() => swiperRef.current?.swiper.slideNext()}
+            className="bg-black/80 hover:bg-black text-gray-300 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+          >
+            <FiArrowRight className="text-xl" />
+          </button>
         </div>
+
+        {/* Swiper Component */}
+        <Swiper
+          ref={swiperRef}
+          modules={[Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          pagination={{
+            clickable: true,
+            el: "custom-pagination",
+            bulletClass: "custom-bullet",
+            bulletActiveClass: "custom-bullet-active",
+          }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          }}
+          navigation={false}
+          className="py-12"
+        >
+          {cards.map((card, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className={`bg-[#F3F3F3] rounded-xl shadow-md p-6 md:p-8 transition-all duration-300 ${
+                  card.offset
+                } ${
+                  activeIndex === index ? "scale-105 shadow-lg" : "scale-100"
+                }`}
+              >
+                <div className="flex justify-between items-start mb-4 lg:mt-3.5">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
+                    {card.title}
+                  </h2>
+                  <span className="bg-[#2CCEBA] p-3 rounded-full">
+                    <img src={card.icon} alt={card.title} className="w-6 h-6" />
+                  </span>
+                </div>
+                <div className="border border-gray-400/20 max-w-[364px]"></div>
+                <p className="text-gray-600 text-base md:text-lg mt-2.5">
+                  {card.content}
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </>
   );

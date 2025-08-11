@@ -10,6 +10,54 @@
   );
 }
 
+.software::before {
+  content: url("./assets//banner_frame/grid_layout_left.svg");
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    95deg,
+    rgba(20, 184, 166, 0.6) 0%,
+    rgba(20, 184, 166, 0.3) 50%,
+    transparent 90%
+  );
+  opacity: 0.4;
+  filter: blur(100px);
+  z-index: 0;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  transform: rotate(10deg);
+}
+.software::after {
+  content: url("./assets//banner_frame/grid_layout_left.svg");
+  position: absolute;
+  background: linear-gradient(
+    95deg,
+    rgba(20, 184, 166, 0.6) 0%,
+    rgba(20, 184, 166, 0.3) 50%,
+    transparent 90%
+  );
+  opacity: 0.4;
+  filter: blur(100px);
+  z-index: 0;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  transform: rotate(10deg);
+  right: -80px;
+  top: 0;
+}
+
+/* Responsive positioning */
+@media (min-width: 768px) {
+  .teal-blur-effect::before {
+    filter: blur(120px);
+  }
+  .teal-blur-effect::after {
+    filter: blur(150px);
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -144,5 +192,17 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .custom-pagination {
+    @apply mt-8 mb-4 !flex justify-center gap-2;
+  }
+  .custom-bullet {
+    @apply w-3 h-3 bg-gray-300 opacity-100 mx-1 transition-all duration-300;
+  }
+  .custom-bullet-active {
+    @apply bg-[#2CCEBA] w-6 rounded-lg;
   }
 }

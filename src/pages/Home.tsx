@@ -1,4 +1,7 @@
 import React, { useRef, useEffect } from "react";
+import hero_blur_left from "../assets/banner_frame/hero_blur_left.svg";
+import hero_blur_right from "../assets/banner_frame/hero_blur-right.svg";
+
 import { FaArrowUp } from "react-icons/fa6";
 import Navbar from "../components/ui/Navbar";
 import Hero from "../components/ui/Hero";
@@ -55,13 +58,19 @@ const Home: React.FC = () => {
       </button>
 
       <div className="relative w-full bg-primary overflow-hidden">
-        <div className="container relative">
-          <div className="absolute right-0 top-1/4 w-[120px] h-[500px] rounded-full bg-[#00ffe0] opacity-20 blur-[50px] translate-x-[50px] -translate-y-[200px] rotate-45"></div>
-          <div className="absolute right-0 top-1/4 w-[120px] h-[500px] rounded-full bg-[#00ffe0] opacity-20 blur-[50px] translate-x-[40px] translate-y-[100px] rotate-45"></div>
-          <div className="absolute inset-0 w-[120px] h-[500px] bg-[#00ffe0]/60 opacity-30 blur-[50px] rounded-full -rotate-45 -translate-x-[50px] -translate-y-[200px]"></div>
-          <div className="absolute inset-0 w-[120px] h-[400px] bg-[#00ffe0]/60 opacity-30 blur-[50px] rounded-full -rotate-45 translate-x-[20px] translate-y-[230px]"></div>
-        </div>
         <div className="relative z-10 text-white text-4xl p-10">
+          <div className="absolute -top-50 -left-100 z-[400]">
+            <img src={hero_blur_left} alt="" className="inline-block" />
+          </div>
+          <div className="absolute top-50 -left-120 z-[400]">
+            <img src={hero_blur_left} alt="" className="inline-block" />
+          </div>
+          <div className="absolute -top-50 -right-100 z-[400]">
+            <img src={hero_blur_right} alt="" className="inline-block" />
+          </div>
+          <div className="absolute top-50 -right-120 z-[400]]">
+            <img src={hero_blur_right} alt="" className="inline-block" />
+          </div>
           <Navbar />
           <Hero />
         </div>

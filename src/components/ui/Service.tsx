@@ -56,16 +56,16 @@ const Service: React.FC = () => {
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className="col-span-1 xl:col-span-4 py-[32px] sm:py-[42px] px-[20px] sm:px-[24px] rounded-[24px] bg-[#F3F3F3] hover:bg-[#27B4A3] hover:text-white duration-300 transition-all"
+              className="group col-span-1 xl:col-span-4 py-[32px] sm:py-[42px] px-[20px] sm:px-[24px] rounded-[24px] bg-[#F3F3F3] hover:bg-[#27B4A3] hover:text-white duration-300 transition-all"
             >
               <div className="w-full flex flex-col space-y-[25px] sm:space-y-[35px]">
                 <h2 className="font-bricol text-[28px] sm:text-[36px] lg:text-[42px] font-semibold leading-snug">
                   {card.title}
                 </h2>
-                <p className="font-outfit text-[16px] sm:text-[18px] text-gray-500">
+                <p className="font-outfit text-[16px] sm:text-[18px] text-gray-500 group-hover:text-white">
                   {card.subTitle}
                 </p>
-                <span className="bg-white p-[18px] sm:p-[22px] rounded-full max-w-[56px] sm:max-w-[66px] shadow-lg cursor-pointer">
+                <span className="bg-white w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] inline-flex items-center justify-center rounded-full shadow-lg cursor-pointer">
                   <img src={card.icon} alt="" className="inline-block" />
                 </span>
               </div>
