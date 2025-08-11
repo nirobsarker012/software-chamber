@@ -95,13 +95,13 @@ export default function Passion() {
         <div className="absolute top-1/2 left-0 right-0 flex justify-between z-10 -translate-y-1/2">
           <button
             onClick={() => swiperRef.current?.swiper.slidePrev()}
-            className="bg-black/80 hover:bg-black text-gray-300 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="bg-black/80 hover:bg-black text-gray-300 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 cursor-pointer"
           >
             <FiArrowLeft className="text-xl" />
           </button>
           <button
             onClick={() => swiperRef.current?.swiper.slideNext()}
-            className="bg-black/80 hover:bg-black text-gray-300 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+            className="bg-black/80 hover:bg-black text-gray-300 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 cursor-pointer"
           >
             <FiArrowRight className="text-xl" />
           </button>

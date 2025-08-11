@@ -5,7 +5,7 @@ import company_logo from "../../assets/logos_svg/logo_2.svg";
 const ClientInfo: React.FC = () => {
   return (
     <div className="bg-primary py-[120px] relative overflow-hidden">
-      <div className="container">
+      <div data-aos="fade-up" data-aos-delay="80" className="container">
         <div className="flex flex-col justify-center items-center">
           <img src={bannerBtn} alt="" className="mb-[40px]" />
           <h1 className="font-medium font-bricol text-[32px] lg:text-[42px] xl:text-[68px] text-center max-w-[1000px] text-white xl:leading-20 mb-[64px] xl:mb-[160px]">

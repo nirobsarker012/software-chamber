@@ -88,13 +88,15 @@ const Footer: React.FC = () => {
         </div>
         <div className="w-full my-4 h-[1px] bg-[repeating-linear-gradient(to_right,rgba(255,255,255,0.5),rgba(255,255,255,0.5)_12px,transparent_8px,transparent_20px)] mt-[60px] lg:mt-[156px]"></div>
         {/*  */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-x-10">
           <span className="font-outfit text-[12px] lg:text-[18px] text-gray-400">
             2025 Software Chamber All Right Reserved
           </span>
-          <div className="flex flex-col lg:flex-row gap-1 lg:gap-x-[82px] items-center text-gray-400 font-medium font-outfit text-[16px]">
+          <div className="flex flex-col lg:flex-row lg:gap-x-[82px] items-center text-gray-400 font-medium font-outfit text-[16px]">
             <span className="corsor-pointer">Privacy Policy</span>
-            <span className="corsor-pointer">Terms & Conditions</span>
+            <span className="corsor-pointer hidden lg:block">
+              Terms & Conditions
+            </span>
           </div>
         </div>
       </div>

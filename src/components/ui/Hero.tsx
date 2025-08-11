@@ -5,7 +5,7 @@ import { IoMdLogOut } from "react-icons/io";
 import BannerCardDesign from "../styles/BannerCardDesign";
 const Hero: React.FC = () => {
   return (
-    <main>
+    <main data-aos="fade-up" data-aos-delay="50">
       <div className="min-h-[500px] xl:min-h-screen bg-[url('assets/banner_frame/hero.svg')] bg-cover bg-center container relative">
         {/* Background pattern - made responsive */}
         <div className="absolute top-70 lg:top-90 xl:top-1/2 left-1/2 w-full max-w-[95vw] md:w-[800px] lg:w-[1000px] xl:w-[1200px] sm:h-[400px] md:h-[500px] bg-[radial-gradient(#3d3d3d_1px,transparent_1px)] [background-size:10px_10px] -translate-x-1/2 -translate-y-1/2">
@@ -24,12 +24,12 @@ const Hero: React.FC = () => {
                 <img
                   src={hero_img}
                   alt=""
-                  className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[90px] md:h-[90px] inline-block mx-1"
+                  className="hidden md:w-[90px] md:h-[90px] md:inline-block mx-1 mt-3"
                 />
                 <img
                   src={hero_img}
                   alt=""
-                  className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[90px] md:h-[90px] inline-block mx-1"
+                  className="hidden md:w-[90px] md:h-[90px] md:inline-block mx-1 mt-3"
                 />
               </span>
               Team in the Cloud

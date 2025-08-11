@@ -1,20 +1,15 @@
 import React from "react";
-// import grid_icon from "../../assets/banner_frame/grid_right.svg";
-// import grid_layout_left from "../../assets/banner_frame/grid_layout_left.svg";
 import banner_btn from "../../assets/banner_frame/banner_btn.svg";
 import { IoMdLogOut } from "react-icons/io";
 import earth_img from "../../assets/banner_frame/earth.svg";
 
 const Software: React.FC = () => {
   return (
-    <div className="bg-primary pt-[160px] relative software overflow-hidden">
-      {/* <div className="">
-        <img
-          src={grid_layout_left}
-          alt=""
-          className="z-[-999px] inline-block"
-        />
-      </div> */}
+    <div
+      data-aos="fade-up"
+      data-aos-once="false"
+      className="bg-primary pt-[160px] relative software overflow-hidden"
+    >
       <div className="container relative px-4 sm:px-6 lg:px-8">
         {/* Content Center */}
         <div className="flex items-center justify-center flex-col text-center">

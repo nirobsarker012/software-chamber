@@ -107,15 +107,15 @@ const Digital_Solu: React.FC = () => {
             />
           </div>
 
-          <div className="md:col-span-12 xl:col-span-4">
+          <div data-aos="fade-up-left" className="md:col-span-12 xl:col-span-4">
             <div className="flex flex-col gap-y-[20px]">
               {contexts.map((context) => (
                 <div
                   key={context.id}
                   className="flex items-start gap-x-[16px] border-b border-[#000000]/20%"
                 >
-                  <div className="bg-[#27B4A3] p-[18px] rounded-full shrink-0">
-                    <span className="bg-white p-[4.5px] px-[9px] rounded-full text-[#436255] font-inter font-bold">
+                  <div className="bg-[#27B4A3] w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] flex items-center justify-center rounded-full shrink-0">
+                    <span className="bg-white w-[32px] h-[32px] flex items-center justify-center rounded-full text-[#436255] font-inter font-bold">
                       {context.id}
                     </span>
                   </div>

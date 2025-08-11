@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import navbar_img from "../../assets/logos_svg/nav_logo.svg";
 import { IoMdLogOut } from "react-icons/io";
 import menubar from "../../assets/components_svg/menu_bar.svg";
+import { motion } from "motion/react";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -19,7 +20,12 @@ const Navbar: React.FC = () => {
           isScrolled ? "bg-white/5 backdrop-blur-md shadow-lg" : "null"
         }`}
       >
-        <div className="flex justify-between items-center container pt-2 lg:pt-0">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="flex justify-between items-center container pt-2 lg:pt-0"
+        >
           {/* NavbarImage */}
           <img
             src={navbar_img}
@@ -39,7 +45,7 @@ const Navbar: React.FC = () => {
               <img src={menubar} alt="" />
             </button>
           </div>
-        </div>
+        </motion.div>
       </nav>
     </header>
   );

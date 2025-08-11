@@ -11,7 +11,7 @@ const BannerCardDesign: React.FC = () => {
   return (
     <>
       {/* Banner card*/}
-      <div className="flex flex-col lg:flex-row justify-between container">
+      <div className="flex flex-col lg:flex-row justify-between container md:mt-6">
         {/* Side images - hidden on mobile, shown from md upwards */}
         <div className="hidden xl:flex flex-col space-y-20 lg:space-y-40 mt-[30px] lg:mt-[50px]">
           <img src={website_img} alt="" className="w-[100px] lg:w-auto" />

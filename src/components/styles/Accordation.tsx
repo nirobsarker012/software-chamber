@@ -56,9 +56,9 @@ const Accordation: React.FC = () => {
           >
             {item.question}
             {activeId === item.id ? (
-              <FiChevronUp className="bg-teal-400 text-white w-[50px] h-[50px] text-2xl rounded-full cursor-pointer" />
+              <FiChevronUp className="bg-teal-400 text-white w-[50px] h-[50px] rounded-full cursor-pointer" />
             ) : (
-              <FiChevronDown className=" bg-[#383838] text-white w-[50px] h-[50px] rounded-full text-2xl cursor-pointer" />
+              <FiChevronDown className=" bg-[#383838] text-white w-[50px] h-[50px] rounded-full cursor-pointer" />
             )}
           </button>
 

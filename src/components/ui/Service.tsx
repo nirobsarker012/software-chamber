@@ -45,7 +45,7 @@ const Service: React.FC = () => {
           </h1>
           <span className="inline-flex items-center gap-x-3.5 font-outfit text-[18px] sm:text-[20px] cursor-pointer">
             All Services
-            <div className="bg-[#F3F3F3] py-[8px] px-[7px] rounded-full">
+            <div className="bg-[#F3F3F3] w-[50px] h-[50px] flex items-center justify-center rounded-full">
               <FaArrowRightLong />
             </div>
           </span>
