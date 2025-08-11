@@ -6,7 +6,7 @@ import BannerCardDesign from "../styles/BannerCardDesign";
 const Hero: React.FC = () => {
   return (
     <main data-aos="fade-up" data-aos-delay="50">
-      <div className="min-h-[500px] xl:min-h-screen bg-[url('assets/banner_frame/hero.svg')] bg-cover bg-center container relative">
+      <div className="min-h-[500px] xl:min-h-screen bg-[url('assets/banner_frame/hero.svg')] bg-cover bg-center container overflow-hidden relative">
         {/* Background pattern - made responsive */}
         <div className="absolute top-70 lg:top-90 xl:top-1/2 left-1/2 w-full max-w-[95vw] md:w-[800px] lg:w-[1000px] xl:w-[1200px] sm:h-[400px] md:h-[500px] bg-[radial-gradient(#3d3d3d_1px,transparent_1px)] [background-size:10px_10px] -translate-x-1/2 -translate-y-1/2">
           <div className="flex flex-col justify-center items-center h-full px-4 sm:px-6">

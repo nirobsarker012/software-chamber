@@ -76,15 +76,17 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <Digital_Solu />
-      <Service />
-      <Software />
-      <Passion />
-      <Technology_Pattern />
-      <Faq />
-      <ClientInfo />
-      <Contact />
-      <Footer />
+      <div className="overflow-hidden">
+        <Digital_Solu />
+        <Service />
+        <Software />
+        <Passion />
+        <Technology_Pattern />
+        <Faq />
+        <ClientInfo />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 };
