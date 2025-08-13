@@ -35,7 +35,7 @@ const Accordation: React.FC = () => {
     },
   ];
 
-  const [activeId, setActiveId] = useState<number | null>(null);
+  const [activeId, setActiveId] = useState<number | null>(2);
 
   const toggleAccordion = (id: number) => {
     setActiveId(activeId === id ? null : id);
