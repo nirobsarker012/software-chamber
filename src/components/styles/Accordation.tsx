@@ -54,7 +54,7 @@ const Accordation: React.FC = () => {
             onClick={() => toggleAccordion(item.id)}
             className="w-full flex justify-between items-center py-4 text-left font-medium text-lg sm:text-xl lg:text-2xl"
           >
-            <span className="pr-4">{item.question}</span>
+            <span className="pr-4 font-bricol">{item.question}</span>
             <span className="flex-shrink-0">
               {activeId === item.id ? (
                 <FiChevronUp className="bg-teal-400 text-white w-8 h-8 sm:w-10 sm:h-10 p-1.5 sm:p-2 rounded-full" />
